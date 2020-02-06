@@ -1,0 +1,40 @@
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe.config
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.pdb
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.exe
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.pdb
+c:\users\cody jensen\documents\visual studio 2013\Projects\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.csprojResolveAssemblyReference.cache
+H:\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe.config
+H:\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.exe
+H:\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.pdb
+H:\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe
+H:\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.pdb
+H:\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.csprojResolveAssemblyReference.cache
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe.config
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.exe
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\bin\Debug\ConsolePlayground.pdb
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.csprojResolveAssemblyReference.cache
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.exe
+C:\Users\Akira\Desktop\ConsolePlayground\ConsolePlayground\obj\Debug\ConsolePlayground.pdb
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe.config
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.pdb
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.csproj.CoreCompileInputs.cache
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.exe
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.pdb
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe.manifest
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.application
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.exe.manifest
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.application
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.csprojAssemblyReference.cache
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.csprojAssemblyReference.cache
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.csproj.CoreCompileInputs.cache
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.exe
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.pdb
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe.config
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe.manifest
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.application
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.exe
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\bin\Debug\ConsolePlayground.pdb
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.exe.manifest
+C:\Users\UF-CJ\Desktop\Projects\C#\C# Console RPG\ConsolePlayground\obj\Debug\ConsolePlayground.application

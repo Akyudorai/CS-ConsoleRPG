@@ -1,0 +1,10 @@
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Release\ConsolePlayground.exe.config
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Release\ConsolePlayground.exe.manifest
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Release\ConsolePlayground.application
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Release\ConsolePlayground.exe
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\bin\Release\ConsolePlayground.pdb
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Release\ConsolePlayground.csproj.CoreCompileInputs.cache
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Release\ConsolePlayground.exe.manifest
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Release\ConsolePlayground.application
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Release\ConsolePlayground.exe
+D:\_PROJECTS\C# Console RPG\ConsolePlayground\obj\Release\ConsolePlayground.pdb
