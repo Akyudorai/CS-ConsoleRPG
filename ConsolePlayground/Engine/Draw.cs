@@ -65,7 +65,8 @@ namespace ConsolePlayground
                 Console.Write("─");
             }                                   
         }
-
+        
+        /*
         public string GetCornerPiece(Box2D.Corner corner, List<Box2D.Side> sides)
         {
             
@@ -116,6 +117,8 @@ namespace ConsolePlayground
             // Error
             else { return "?"; }            
         }
+        */
+
 
         // Presets
         // -------------------------------------------
@@ -156,6 +159,8 @@ namespace ConsolePlayground
                 }
                 Console.Write("╣");
             }
+
+            
             #endregion
 
 
@@ -240,7 +245,7 @@ namespace ConsolePlayground
                 Console.Write("─");
             } 
 
-            map.drawMap();            
+            //map.drawMap();            
 
 
         }

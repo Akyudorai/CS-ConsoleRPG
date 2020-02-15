@@ -8,8 +8,6 @@ namespace ConsolePlayground
 {
     class Control
     {
-        Draw draw = new Draw();
-
         public void MainControls(Map map)
         {
             Console.SetCursorPosition(4, 0);
@@ -17,41 +15,41 @@ namespace ConsolePlayground
             switch (input.Key)
             {
                 case ConsoleKey.UpArrow:
-                    if (map.playerXPos - 1 >= 0)
-                    {
-                        map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
-                        map.storeChar = map.mapArray[map.playerXPos - 1, map.playerYPos];                        
-                        map.playerXPos--;
-                        map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
-                    }                  
+                    //if (map.playerXPos - 1 >= 0)
+                    //{
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
+                    //    map.storeChar = map.mapArray[map.playerXPos - 1, map.playerYPos];                        
+                    //    map.playerXPos--;
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
+                    //}                  
                     break;
                 case ConsoleKey.DownArrow:
-                    if (map.playerXPos + 1 <= map.mapArray.GetLength(0) - 1)
-                    {
-                        map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
-                        map.storeChar = map.mapArray[map.playerXPos + 1, map.playerYPos];                        
-                        map.playerXPos++;
-                        map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
-                    }
+                    //if (map.playerXPos + 1 <= map.mapArray.GetLength(0) - 1)
+                    //{
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
+                    //    map.storeChar = map.mapArray[map.playerXPos + 1, map.playerYPos];                        
+                    //    map.playerXPos++;
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
+                    //}
 
                     break;
                 case ConsoleKey.LeftArrow:
-                    if (map.playerYPos - 1 >= 0)
-                    {
-                        map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
-                        map.storeChar = map.mapArray[map.playerXPos, map.playerYPos - 1];                        
-                        map.playerYPos--;
-                        map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
-                    }
+                    //if (map.playerYPos - 1 >= 0)
+                    //{
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
+                    //    map.storeChar = map.mapArray[map.playerXPos, map.playerYPos - 1];                        
+                    //    map.playerYPos--;
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
+                    //}
                     break;
                 case ConsoleKey.RightArrow:
-                    if (map.playerYPos + 1 <= map.mapArray.GetLength(1) - 1)
-                    {
-                        map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
-                        map.storeChar = map.mapArray[map.playerXPos, map.playerYPos + 1];                        
-                        map.playerYPos++;
-                        map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
-                    }                    
+                    //if (map.playerYPos + 1 <= map.mapArray.GetLength(1) - 1)
+                    //{
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = map.storeChar;
+                    //    map.storeChar = map.mapArray[map.playerXPos, map.playerYPos + 1];                        
+                    //    map.playerYPos++;
+                    //    map.mapArray[map.playerXPos, map.playerYPos] = 'P';                        
+                    //}                    
                     break;
                 case ConsoleKey.Escape:
                     Environment.Exit(0);

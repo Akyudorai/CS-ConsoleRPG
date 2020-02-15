@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 namespace ConsolePlayground
 {
     class Game
-    {        
-        Menu menu = new Menu();
-        Map map = new Map();
+    {                
+        public Map map = new Map1();
         Control control = new Control();
 
-        Scene scene = new Engine.Scenes.GameScene();
+        public Scene scene = new Engine.Scenes.GameScene();
 
         // Singleton
         // -------------------------------------------
@@ -39,11 +38,9 @@ namespace ConsolePlayground
         
         public void GameRun()
         {           
-            map.initMap();
+            map.InitializeMap();
             Draw.GetInstance().DrawGame(Player.GetInstance(), map);            
-
-            Console.SetCursorPosition(0, 0);
-            Console.Write(map.playerXPos + ", " + map.playerYPos);
+            
             bool game_is_running = true;
             while (game_is_running == true)
             {
@@ -57,7 +54,6 @@ namespace ConsolePlayground
                 //Draw.GetInstance().DrawMap(player, map);
                 //Draw.GetInstance().DrawPlayer(player);               
                 Console.SetCursorPosition(0, 0);
-                Console.Write(map.playerXPos + ", " + map.playerYPos);
                 
             }
         }

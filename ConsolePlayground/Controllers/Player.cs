@@ -53,6 +53,9 @@ namespace ConsolePlayground
                 maxEnergy = profile._Stats.Energy,
                 currentEnergy = profile._Stats.Energy,
             };
+
+            // Set Controller State to Menu Controls
+            state = State.menu;
         }
 
         // Handles Experience Gain and Leveling Up

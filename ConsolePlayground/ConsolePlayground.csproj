@@ -102,7 +102,7 @@
     <Compile Include="Character Sheets\Weapons\Sword.cs" />
     <Compile Include="Character Sheets\Weapons\Wand.cs" />
     <Compile Include="Control.cs" />
-    <Compile Include="Game\CommandList.cs" />
+    <Compile Include="Game\Menu.cs" />
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Engine\Box2D.cs" />
     <Compile Include="Engine\Draw.cs" />
@@ -115,8 +115,8 @@
     <Compile Include="Entity.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Game\Map.cs" />
+    <Compile Include="Game\Menu\SampleMenu.cs" />
     <Compile Include="Game\Zone.cs" />
-    <Compile Include="Menu.cs" />
     <Compile Include="Controllers\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Engine\Progress.cs" />

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsolePlayground.exe" size="45056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsolePlayground.exe" size="48128">
       <assemblyIdentity name="ConsolePlayground" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IZZcNlg7xeRRoH9FmJ8uWXdhouCccYkZv0PJgAKiZeA=</dsig:DigestValue>
+        <dsig:DigestValue>vjG5xh79oITTPQFgSCjWduJeabE/DE7IEe4tV8lTv1A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
