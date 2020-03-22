@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsolePlayground
 {    
+    public delegate void SwapPlayerState();
+
     class Player : Controller
     {
         // Variables
@@ -73,6 +75,16 @@ namespace ConsolePlayground
                 profile.Level += 1;
                 profile.Experience = 0;
                 profile._Stats += profile._Class.statGrowth;
+
+                // Adjust Max Health
+                entity.maxHealth = profile._Stats.Health * profile._Stats.HealthMultiplier;
+                entity.currentHealth = entity.maxHealth;
+
+                // Adjust Max Energy
+                entity.maxEnergy = profile._Stats.Energy * profile._Stats.EnergyMultiplier;
+                entity.currentEnergy = entity.maxEnergy;
+
+                Scene.activeScene.DrawScene();
             }           
         }
 
@@ -184,7 +196,11 @@ namespace ConsolePlayground
             InitializePlayer(playerName, _class);
         }
 
-        
+        public void SetState()
+        {
+            if (state == State.explore) { state = State.menu; }
+            else if (state == State.menu) { state = State.explore; }
+        }
 
         /// <summary>
         /// Everything beyond this is old stuff and should be updated.

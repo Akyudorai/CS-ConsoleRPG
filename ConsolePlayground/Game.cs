@@ -8,9 +8,7 @@ namespace ConsolePlayground
 {
     class Game
     {                
-        public Map map = new Map1();
-        Control control = new Control();
-
+        public Map map = new Map1();        
         public Scene scene = new Engine.Scenes.GameScene();
 
         // Singleton
@@ -37,7 +35,8 @@ namespace ConsolePlayground
         }
         
         public void GameRun()
-        {           
+        {
+            scene.SetMenu(map.GetZone().zoneMenu);
             map.InitializeMap();
             Draw.GetInstance().DrawGame(Player.GetInstance(), map);            
             

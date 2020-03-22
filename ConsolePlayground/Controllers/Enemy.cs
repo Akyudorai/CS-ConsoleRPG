@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsolePlayground
 {
-    class Enemy : Controller
+    public class Enemy : Controller
     {
+        public static readonly Random random = new Random();
+
         public static Enemy GenerateRandomEnemy()
         {
-            Random rand = new Random();
-            int i = rand.Next(1, 6); // Number of Possible Classes
+            int i = random.Next(1, 6); // Number of Possible Classes
 
             Enemy e = new Enemy();
 

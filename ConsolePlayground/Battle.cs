@@ -6,11 +6,116 @@ using System.Threading.Tasks;
 
 namespace ConsolePlayground
 {
-    class Battle
+    public class Battle
     {
-        bool playerTurn = true;
-        bool enemyAlive = true;        
+        public static readonly Random random = new Random();
 
+        private bool battleOver;
+        public Enemy[] enemies;
+        public Menu combatMenu;
+
+        private const int maxEnemies = 5;
+        public Battle()
+        {           
+            // Start Battle
+            battleOver = false;
+            
+            // Generate Enemies
+            enemies = new Enemy[] {
+                Enemy.GenerateRandomEnemy()
+            };
+
+            // Generate Action Menu
+            combatMenu = new Menu()
+            {
+                commands = new List<Menu.Option>
+                {
+                    new Menu.Option("Attack", new Menu.Option.Event(new Action(Attack))),                   
+                }                
+            };
+
+            Player p = Player.GetInstance();
+            for (int i = 0; i < Player.GetInstance().profile.Abilities.Count; i++)
+            {
+                Ability.Settings ability_settings = new Ability.Settings
+                {
+                    owner = Player.GetInstance(),
+                    target = enemies[0]
+                };
+
+                Menu.Option option = new Menu.Option(p.profile.Abilities[i].name, new Menu.Option.Event(new Action<Ability.Settings>(p.profile.Abilities[i].Activate), ability_settings));
+                combatMenu.commands.Add(option);
+            }
+        }
+
+        // Temporary :: Switch to actual class abilities
+        private void Attack()
+        {
+            enemies[0].entity.DamageEntity(30 * Player.GetInstance().profile._Stats.Power);
+        }
+
+        public void BattleLoop()
+        {
+            while (battleOver != true)
+            {
+                Game.GetInstance().scene.DrawHealthAndEnergy(this);
+                Game.GetInstance().scene.DrawMenu();
+
+                Player.GetInstance().Input(Game.GetInstance().scene);
+
+                #region Player Loses The Battle
+
+                if (Player.GetInstance().entity.currentHealth <= 0)
+                {
+                    // Player dies.
+                    battleOver = true; 
+                }
+
+                #endregion
+
+                #region Player Completes The Battle
+
+                int dead = 0;
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    if (enemies[i] != null)
+                    {
+                        if (enemies[i].entity.currentHealth <= 0)
+                        {
+                            dead++;
+                        }
+                    }
+                }
+
+                if (dead == enemies.Length)
+                {
+                    // Player Clears the Battle
+                    battleOver = true;
+                    Player.GetInstance().AddExperience(25 * enemies.Length);
+
+                    Player.GetInstance().state = Controller.State.explore;
+                    Game.GetInstance().scene.DrawHealthAndEnergy(null);
+                }
+
+                
+
+                #endregion
+
+            }
+        }
+
+
+
+
+        /// <summary>
+        ///  OLD STUFF
+        /// </summary>
+        /// 
+
+        //bool playerTurn = true;
+        //bool enemyAlive = true;        
+
+        /*
         public void BattlePhase(Player player, Entity enemy)
         {
             string attack1 = player.profile._Class.activeAbilities[0].name;
@@ -107,7 +212,7 @@ namespace ConsolePlayground
             enemyAlive = true;
             playerTurn = true;
         }
-        
+        */
         
 
             //if (player.Health <= 0)

@@ -101,7 +101,6 @@
     <Compile Include="Character Sheets\Weapons\Staff.cs" />
     <Compile Include="Character Sheets\Weapons\Sword.cs" />
     <Compile Include="Character Sheets\Weapons\Wand.cs" />
-    <Compile Include="Control.cs" />
     <Compile Include="Game\Menu.cs" />
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Engine\Box2D.cs" />

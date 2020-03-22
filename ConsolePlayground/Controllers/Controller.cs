@@ -9,7 +9,7 @@ namespace ConsolePlayground
 {
     public class Controller
     {
-        public enum State { menu, explore }
+        public enum State { menu, explore, combat }
 
         // Variables
         // -------------------------------------------
@@ -24,7 +24,7 @@ namespace ConsolePlayground
         public void Input(Scene scene)
         {
             Map map = Game.GetInstance().map;
-
+                    
             var input = Console.ReadKey(true);
             switch (input.Key)
             {
@@ -33,7 +33,7 @@ namespace ConsolePlayground
                     if (state == State.menu)
                     {
                         if (this.input > 0) this.input--;
-                        else this.input = 2;
+                        else this.input = Game.GetInstance().scene.menu.commands.Count - 1;
 
                         scene.DrawMenu();
                         Input(scene);
@@ -46,6 +46,16 @@ namespace ConsolePlayground
                             map.UpdatePlayerPosition(new Vector2Int(0, -1));
                         }
 
+                        scene.DrawMenu();
+                        Input(scene);
+                    }
+
+                    else if (state == State.combat)
+                    {
+                        if (this.input > 0) this.input--;
+                        else this.input = Game.GetInstance().scene.battle.combatMenu.commands.Count - 1;
+
+                        scene.DrawMenu();
                         Input(scene);
                     }
                     
@@ -55,7 +65,7 @@ namespace ConsolePlayground
 
                     if (state == State.menu)
                     {
-                        if (this.input < 2) this.input++;
+                        if (this.input < Game.GetInstance().scene.menu.commands.Count - 1) this.input++;
                         else this.input = 0;
 
                         scene.DrawMenu();
@@ -66,13 +76,22 @@ namespace ConsolePlayground
                     {
                         if (map.playerPos.Y + 1 < map.grid.GetLength(1))
                         {
-                            map.UpdatePlayerPosition(new Vector2Int(0, 1));
-                            
+                            map.UpdatePlayerPosition(new Vector2Int(0, 1));                                                        
                         }
 
+                        scene.DrawMenu();
                         Input(scene);
                     }
-                    
+
+                    else if (state == State.combat)
+                    {
+                        if (this.input < Game.GetInstance().scene.battle.combatMenu.commands.Count - 1) this.input++;
+                        else this.input = 0;
+
+                        scene.DrawMenu();
+                        Input(scene);
+                    }
+
                     break;
 
                 case ConsoleKey.LeftArrow:
@@ -89,7 +108,13 @@ namespace ConsolePlayground
                             map.UpdatePlayerPosition(new Vector2Int(-1, 0));                            
                         }
 
+                        scene.DrawMenu();
                         Input(scene);
+                    }
+
+                    else if (state == State.combat)
+                    {
+
                     }
 
                     break;
@@ -108,24 +133,40 @@ namespace ConsolePlayground
                             map.UpdatePlayerPosition(new Vector2Int(1, 0));
                         }
 
+                        scene.DrawMenu();
                         Input(scene);
+                    }
+
+                    else if (state == State.combat)
+                    {
+
                     }
 
                     break;
 
                 case ConsoleKey.Enter:
 
-                    // Activate Command
                     if (state == State.menu)
                     {
-                        state = State.explore;
+                        if (Game.GetInstance().scene.menu.commands[this.input].dialogEvent != null)
+                            Game.GetInstance().scene.menu.commands[this.input].dialogEvent.Activate();
                     }
 
                     else if (state == State.explore)
                     {
+                        Game.GetInstance().scene.menu = map.GetZone().zoneMenu;
                         state = State.menu;
                     }
 
+                    else if (state == State.combat)
+                    {
+                        if (Game.GetInstance().scene.battle.combatMenu.commands[this.input].dialogEvent != null)
+                            Game.GetInstance().scene.battle.combatMenu.commands[this.input].dialogEvent.Activate();
+                    }
+
+
+                    this.input = 0;
+                    
                     break;
 
                 case ConsoleKey.Escape:

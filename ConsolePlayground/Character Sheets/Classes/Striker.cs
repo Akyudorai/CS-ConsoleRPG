@@ -22,7 +22,7 @@ namespace ConsolePlayground
 
             activeAbilities = new Ability[]
             {
-               
+               new Slice_And_Dice()
             };
         }
 
@@ -69,11 +69,17 @@ namespace ConsolePlayground
             public override void Activate(Settings settings)
             {
                 /// NO ACTIVATED ABILITY
+                settings.owner.entity.currentEnergy -= 25.0f;
+                Effect(settings);
             }
 
             public override void Effect(Settings settings)
             {
+                settings.target.entity.DamageEntity(25 * settings.owner.profile._Stats.Power * settings.owner.profile._Stats.PowerMultiplier);
+                Game.GetInstance().scene.DrawHealthAndEnergy(Game.GetInstance().scene.battle);
 
+                System.Threading.Thread.Sleep(200);
+                settings.target.entity.DamageEntity(25 * settings.owner.profile._Stats.Power * settings.owner.profile._Stats.PowerMultiplier);                
             }
         }
 

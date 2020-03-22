@@ -14,15 +14,15 @@ namespace ConsolePlayground
             width = 9; height = 8;
             grid = new Zone[,]
             {
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(1), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)},
-                { new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0), new Zone(0)}
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new City(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()},
+                { new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland(), new Grassland()}
             }; 
 
             for (int row = 0; row < grid.GetLength(1); row++)
@@ -66,7 +66,9 @@ namespace ConsolePlayground
                     grid[col, row].box.Draw(position, adjacency);
                     grid[col, row].box.start = position;
                     
-                    if (grid[col, row].background == ConsoleColor.DarkGray)
+                    if (grid[col, row].zone == ZoneType.City)
+                        grid[col, row].box.Outline(grid[col, row].background);
+                    if (grid[col, row].zone == ZoneType.Grassland)
                         grid[col, row].box.Outline(grid[col, row].background);
 
                     position.X += maxWidth / width;

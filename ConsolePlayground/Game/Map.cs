@@ -9,8 +9,6 @@ public delegate void WriteMapDetails(string mapDetails);
 
 namespace ConsolePlayground
 {
-    
-
     class Map
     {
         public Zone[,] grid;
@@ -44,15 +42,27 @@ namespace ConsolePlayground
             grid[playerPos.X, playerPos.Y].text = " ";
             playerPos += direction;
             grid[playerPos.X, playerPos.Y].text = "P";
+            
+            UpdateMap();
 
-            UpdateMap();            
+            // Enter City Automatically
+            if (grid[playerPos.X, playerPos.Y].zone == ZoneType.City)
+            {
+                Game.GetInstance().scene.menu = GetZone().zoneMenu;
+                Player.GetInstance().SetState();                
+            }
+            
+            // Random Event
+            grid[playerPos.X, playerPos.Y].GenerateRandomEvent();
+
+            
         }
 
         public virtual void UpdateMap()
         {
             
             string zoneDescription = grid[playerPos.X, playerPos.Y].zoneDescription;
-            Game.GetInstance().scene.LogPanel_2(zoneDescription);
+            Game.GetInstance().scene.LogPanel_2(zoneDescription, "");
             
             for (int row = 0; row < grid.GetLength(1); row++)
             {
@@ -62,6 +72,8 @@ namespace ConsolePlayground
                 }
             }
         }
+
+        public Zone GetZone() { return grid[playerPos.X, playerPos.Y]; }
 
         // --------------------------- GAME MAP END --------------------------
                 

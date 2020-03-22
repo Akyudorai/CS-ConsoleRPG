@@ -34,6 +34,10 @@ namespace ConsolePlayground
         private int experience;
         public int Experience { get { return experience; } set { experience = value; } }
 
+        // Combat Menu
+        private Menu combatMenu;
+        public Menu CombatMenu { get { return combatMenu; } set { combatMenu = value; } }
+
         // Equipment -- turn into custom class
         public Equipment equipment;
     }
